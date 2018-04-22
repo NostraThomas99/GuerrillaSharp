@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>NostraThomas Industries</authors>
+    <licenseUrl>https://github.com/NostraThomas99/GuerrillaSharp/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/NostraThomas99/GuerrillaSharp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A C# Library for GuerrillaMail api</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>mail email guerrillamail c#</tags>
+  </metadata>
+</package>

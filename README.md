@@ -1,6 +1,8 @@
 # GuerrillaSharp
 C# Library for GuerrillaMail API
 
+https://www.nuget.org/packages/GuerrillaSharp/
+
 A tiny little library for using GuerrillaMail apis in your C# app. Receive any emails you need to with this!
 
 Usage:

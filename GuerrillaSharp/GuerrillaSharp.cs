@@ -1,4 +1,4 @@
-﻿using GuerrillaSharp.Models;
+using GuerrillaSharp.Models;
 using GuerrillaSharp.Util;
 using Newtonsoft.Json;
 using System;
@@ -39,6 +39,20 @@ namespace GuerrillaSharp
         {
             CookieContainer cookies = new CookieContainer();
             string url = "https://api.guerrillamail.com/ajax.php?f=get_email_address";
+            Response response = HttpUtil.Get(url, cookies);
+            GuerrillaMail tempmail = JsonConvert.DeserializeObject<GuerrillaMail>(response.Json);
+            this.EmailAddress = tempmail.EmailAddress;
+            this.EmailAlias = tempmail.EmailAlias;
+            this.EmailTimestamp = tempmail.EmailTimestamp;
+            this.Cookies = response.Cookies;
+            this.SidToken = tempmail.SidToken;
+            tempmail = null;
+        }
+
+
+        public void SetEmailAddress(string emailAddress)
+        {
+            string url = "https://api.guerrillamail.com/ajax.php?f=set_email_user&email_user=" + emailAddress;
             Response response = HttpUtil.Get(url, cookies);
             GuerrillaMail tempmail = JsonConvert.DeserializeObject<GuerrillaMail>(response.Json);
             this.EmailAddress = tempmail.EmailAddress;

@@ -4,6 +4,11 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Authors>Moshe Reubinoff</Authors>
+    <Company>Noa Software</Company>
+    <Description>GuerrillaSharp is a C# wrapper for the Halo Wars 2 API.</Description>
+    <PackageId>GuerrillaSharp7</PackageId>
+    
   </PropertyGroup>
 
   <ItemGroup>

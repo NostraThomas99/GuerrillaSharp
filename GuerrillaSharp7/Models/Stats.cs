@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GuerrillaSharp;
+namespace GuerrillaSharp7;
 
 
 public class Stats
@@ -25,4 +25,3 @@ public class Stats
     [JsonProperty("total_per_hour")]
     public string TotalPerHour { get; set; }
 }
-

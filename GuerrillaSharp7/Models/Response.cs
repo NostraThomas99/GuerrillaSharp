@@ -1,7 +1,7 @@
 ﻿
 using System.Net;
 
-namespace GuerrillaSharp;
+namespace GuerrillaSharp7;
 
 
 class Response

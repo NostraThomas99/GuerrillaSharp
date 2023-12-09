@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuerrillaSharp", "GuerrillaSharp\GuerrillaSharp.csproj", "{347E8A08-D0B7-413F-A44D-4438EA141181}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuerrillaSharp7", "GuerrillaSharp7\GuerrillaSharp7.csproj", "{347E8A08-D0B7-413F-A44D-4438EA141181}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuerrillaSharp.Tests", "GuerrillaSharp.Tests\GuerrillaSharp.Tests.csproj", "{622A9868-619D-43E3-BE96-2235D0091352}"
 EndProject

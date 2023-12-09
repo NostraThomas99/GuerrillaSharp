@@ -1,7 +1,7 @@
 ﻿using System;
-using GuerrillaSharp;
+using GuerrillaSharp7;
 using System.Linq;
-namespace GuerrillaSharp.Tests;
+namespace GuerrillaSharp7;
 
 public class UnitTest1
 {

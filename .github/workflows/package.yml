@@ -37,11 +37,8 @@ jobs:
       run: dotnet pack --configuration Release --output nupkg --version-suffix ${{ github.run_number }}
 
     - name: publish to nuget
-      uses: nuget/publish-to-nuget@v1
-      with:
-        nuget_api_key: ${{ secrets.NUGET_SECRET }}
-        nuget_package_path: ./nupkg/GuerrillaSharp.1.0.0-${{ github.run_number }}.nupkg
-        nuget_source: https://api.nuget.org/v3/index.json
+      run: |
+        dotnet nuget push nupkg/*.nupkg --api-key ${{ secrets.NUGET_SECRET }}  --source https://api.nuget.org/v3/index.json --skip-duplicate
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1

@@ -6,7 +6,23 @@ on:
       - master
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '7.0.x'
+
+    - name: Build and test
+      run: dotnet build --configuration Release
+    - name: Run tests
+      run: dotnet test --no-build --configuration Release
   build:
+    needs: test
     runs-on: ubuntu-latest
 
     steps:

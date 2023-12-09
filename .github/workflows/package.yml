@@ -34,27 +34,8 @@ jobs:
         dotnet-version: '7.0.x'
 
     - name: Build and pack NuGet package
-      run: dotnet pack --configuration Release --output nupkg --version-suffix ${{ github.run_number }}
+      run: dotnet pack --configuration Release --output nupkg /version:1.0.${{ github.run_number }}
 
     - name: publish to nuget
       run: |
         dotnet nuget push nupkg/*.nupkg --api-key ${{ secrets.NUGET_SECRET }}  --source https://api.nuget.org/v3/index.json --skip-duplicate
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-          tag_name: 1.0.${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
-          draft: false
-          prerelease: false
-    - name: Upload NuGet package
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./nupkg/GuerrillaSharp.1.0.0-${{ github.run_number }}.nupkg
-        asset_name: GuerrillaSharp.1.0.0-${{ github.run_number }}.nupkg
-        asset_content_type: application/octet-stream

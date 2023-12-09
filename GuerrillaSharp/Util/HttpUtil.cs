@@ -1,5 +1,4 @@
-﻿using GuerrillaSharp.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,23 +6,22 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GuerrillaSharp.Util
+namespace GuerrillaSharp;
+internal class HttpUtil
 {
-    internal class HttpUtil
+    internal static Response Get(string url, CookieContainer cookies)
     {
-        internal static Response Get(string url, CookieContainer cookies)
+        HttpClientHandler handler = new HttpClientHandler();
+        handler.CookieContainer = cookies;
+        HttpClient client = new HttpClient(handler);
+        var res = client.GetAsync(url);
+        Response response = new Response()
         {
-            HttpClientHandler handler = new HttpClientHandler();
-            handler.CookieContainer = cookies;
-            HttpClient client = new HttpClient(handler);
-            var res = client.GetAsync(url);
-            Response response = new Response()
-            {
-                Json = res.Result.Content.ReadAsStringAsync().Result,
-                Cookies = cookies
-            };
-            return response;
-        }
+            Json = res.Result.Content.ReadAsStringAsync().Result,
+            Cookies = cookies
+        };
+        return response;
     }
 }
+
 

@@ -5,23 +5,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GuerrillaSharp7;
+namespace GuerrillaSharp7.Models;
 
 
 public class Stats
 {
     [JsonProperty("sequence_mail")]
-    public string SequenceMail { get; set; }
+    public string? SequenceMail { get; set; }
 
     [JsonProperty("created_addresses")]
     public int CreatedAddresses { get; set; }
 
     [JsonProperty("received_emails")]
-    public string ReceivedEmails { get; set; }
+    public string? ReceivedEmails { get; set; }
 
     [JsonProperty("total")]
-    public string Total { get; set; }
+    public string? Total { get; set; }
 
     [JsonProperty("total_per_hour")]
-    public string TotalPerHour { get; set; }
+    public string? TotalPerHour { get; set; }
 }

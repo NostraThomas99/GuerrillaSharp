@@ -1,19 +1,30 @@
-# GuerrillaSharp
-C# Library for GuerrillaMail API
+[![Deploy NuGet Package to GitHub Releases](https://github.com/reubinoff/GuerrillaSharp/actions/workflows/package.yml/badge.svg?branch=master)](https://github.com/reubinoff/GuerrillaSharp/actions/workflows/package.yml)
+
+# GuerrillaMail API
+
+This class provides an interface to interact with the Guerrilla Mail API. Guerrilla Mail is a service that provides disposable email addresses.
 
 https://www.nuget.org/packages/GuerrillaSharp/
 
-A tiny little library for using GuerrillaMail apis in your C# app. Receive any emails you need to with this!
 
-Usage:
+## Methods
 
-GuerrillaMail mail = new GuerrillaMail;
+- **GetEmailAddress()**: Fetches a new email address from the Guerrilla Mail API and stores it in the `MailData` property.
 
+- **CheckEmail()**: Checks for new emails in the current email session and updates the `MailData` property.
 
+- **CheckAndGetEmails()**: Checks for new emails and returns a list of all emails in the current email session.
 
-mail.GetEmailAddress();      Initializes mailbox
+- **CheckAndGetEmails(string fromAddr)**: Checks for new emails and returns a list of all emails from the specified address.
 
-mail.CheckEmail();      Checks mailbox for email
+- **CheckAndWaitForMailFromAddr(string fromAddr, int timeout = 60)**: Checks for new emails from the specified address and waits until an email is received or the timeout is reached.
 
-mail.FetchEmail(emailId);       Gets specific email
+- **FetchEmail(string id)**: Fetches a specific email by its ID.
 
+## Usage
+
+To use this class, create a new `GuerrillaMail` object and call its methods. For example:
+
+```csharp
+var guerrillaMail = new GuerrillaMail();
+var emails = guerrillaMail.CheckAndGetEmails();

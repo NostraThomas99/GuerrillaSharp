@@ -5,8 +5,9 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using GuerrillaSharp7.Models;
 
-namespace GuerrillaSharp7;
+namespace GuerrillaSharp7.Utils;
 internal class HttpUtil
 {
     internal static Response Get(string url, CookieContainer cookies)

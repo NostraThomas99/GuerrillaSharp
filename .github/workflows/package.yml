@@ -52,6 +52,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: .GuerrillaSharp/bin/Release/GuerrillaSharp.1.0.${{ github.run_number }}.nupkg
+        asset_path: ./GuerrillaSharp/bin/Release/GuerrillaSharp.1.0.${{ github.run_number }}.nupkg
         asset_name: GuerrillaSharp.1.0.${{ github.run_number }}.nupkg
         asset_content_type: application/octet-stream

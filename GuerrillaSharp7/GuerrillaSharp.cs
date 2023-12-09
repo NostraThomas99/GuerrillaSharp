@@ -1,6 +1,4 @@
-﻿using GuerrillaSharp.Models;
-using GuerrillaSharp.Util;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +6,9 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GuerrillaSharp
-{
-    public class GuerrillaMail
+namespace GuerrillaSharp7;
+
+public class GuerrillaMail
     {
         private CookieContainer Cookies { get; set; }
 
@@ -73,4 +71,4 @@ namespace GuerrillaSharp
 
 
     }
-}
+

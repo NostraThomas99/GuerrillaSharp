@@ -4,7 +4,7 @@
 
 This class provides an interface to interact with the Guerrilla Mail API. Guerrilla Mail is a service that provides disposable email addresses.
 
-https://www.nuget.org/packages/GuerrillaSharp/
+https://www.nuget.org/packages/GuerrillaSharp7/
 
 
 ## Methods

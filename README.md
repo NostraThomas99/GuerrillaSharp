@@ -1,4 +1,6 @@
 [![Deploy NuGet Package to GitHub Releases](https://github.com/reubinoff/GuerrillaSharp/actions/workflows/package.yml/badge.svg?branch=master)](https://github.com/reubinoff/GuerrillaSharp/actions/workflows/package.yml)
+![Nuget](https://img.shields.io/nuget/dt/GuerrillaSharp7)
+
 
 # GuerrillaMail API
 
